@@ -15,7 +15,11 @@ from typing import Iterable
 
 
 def replace_first(items: list) -> Iterable:
-    # your code here
+    if len(items) == 0 or len(items) == 1:
+        return items
+    else:
+        tmp = items.pop(0)
+        items.append(tmp)
     return items
 
 

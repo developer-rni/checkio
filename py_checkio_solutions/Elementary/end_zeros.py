@@ -10,8 +10,13 @@
 # END_DESC
 
 def end_zeros(num: int) -> int:
-    # your code here
-    return None
+    result = 0
+    for i in str(num)[::-1]:
+        if i == '0':
+            result += 1
+        else:
+            break
+    return result
 
 
 if __name__ == '__main__':

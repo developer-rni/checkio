@@ -10,8 +10,7 @@
 # END_DESC
 
 def backward_string(val: str) -> str:
-    # your code here
-    return None
+    return val[::-1]
 
 
 if __name__ == '__main__':

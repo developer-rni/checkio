@@ -10,8 +10,7 @@
 # END_DESC
 
 def max_digit(number: int) -> int:
-    # your code here
-    return 0
+    return int(max(str(number)))
 
 
 if __name__ == '__main__':

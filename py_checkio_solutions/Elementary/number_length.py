@@ -10,8 +10,7 @@
 # END_DESC
 
 def number_length(a: int) -> int:
-    # your code here
-    return None
+    return len(str(a))
 
 
 if __name__ == '__main__':

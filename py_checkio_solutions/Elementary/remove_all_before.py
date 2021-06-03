@@ -19,8 +19,11 @@ from typing import Iterable
 
 
 def remove_all_before(items: list, border: int) -> Iterable:
-    # your code here
-    return items
+    if len(items) == 0 or items.count(border) == 0:
+        return items
+    else:
+        index_border_item = items.index(border)
+    return items[index_border_item:]
 
 
 if __name__ == '__main__':

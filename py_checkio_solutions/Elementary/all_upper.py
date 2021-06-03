@@ -12,8 +12,14 @@
 # END_DESC
 
 def is_all_upper(text: str) -> bool:
-    # your code here
-    return False
+    if len(text) == 0:
+        return True
+    for i in text:
+        if i.isspace():
+            continue
+        elif i.isalpha() and i.islower():
+            return False
+    return True
 
 
 if __name__ == '__main__':
