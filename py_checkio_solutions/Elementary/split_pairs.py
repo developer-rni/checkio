@@ -1,6 +1,7 @@
 #!/home/nikita/github/checkio/venv/bin/checkio --domain=py run split-pairs
 
-# Split the string into pairs of two characters. If the string contains an odd number of characters, then the missing second character of the final pair should be replaced with an underscore ('_').
+# Split the string into pairs of two characters. If the string contains an odd number of characters,
+# then the missing second character of the final pair should be replaced with an underscore ('_').
 # 
 # Input:A string.
 # 
@@ -12,8 +13,21 @@
 # END_DESC
 
 def split_pairs(a):
-    # your code here
-    return None
+    result_list = []
+    if len(a) == 0:
+        return result_list
+    elif len(a) == 1:
+        result_list.append(a + '_')
+        return result_list
+    if len(a) % 2 == 0:
+        for i in range(0, len(a), 2):
+            result_list.append(a[i:i+2])
+        return result_list
+    else:
+        for i in range(0, len(a)-1, 2):
+            result_list.append(a[i:i+2])
+        result_list.append(a[-1] + '_')
+        return result_list
 
 
 if __name__ == '__main__':

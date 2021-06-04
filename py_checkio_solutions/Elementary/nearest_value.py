@@ -16,8 +16,25 @@
 # END_DESC
 
 def nearest_value(values: set, one: int) -> int:
-    # your code here
-    return None
+    if one in values:
+        return one
+    if len(values) == 1:
+        return values.pop()
+    values.add(one)
+    new_values = sorted(list(values))
+    index_one = new_values.index(one)
+    if index_one + 1 == len(new_values):
+        return new_values[-2]
+    elif index_one == 0:
+        return new_values[1]
+    prev_numb = new_values[index_one - 1]
+    next_numb = new_values[index_one + 1]
+    dif_prev_numb = one - prev_numb
+    dif_next_numb = next_numb - one
+    if dif_prev_numb > dif_next_numb:
+        return next_numb
+    else:
+        return prev_numb
 
 
 if __name__ == '__main__':

@@ -12,8 +12,7 @@
 # END_DESC
 
 def is_even(num: int) -> bool:
-    # your code here
-    return False
+    return True if num % 2 == 0 else False
 
 
 if __name__ == '__main__':

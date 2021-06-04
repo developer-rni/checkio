@@ -12,8 +12,13 @@
 # END_DESC
 
 def beginning_zeros(number: str) -> int:
-    # your code here
-    return 0
+    c = 0
+    for i in number:
+        if i == '0':
+            c += 1
+        else:
+            break
+    return c
 
 
 if __name__ == '__main__':
