@@ -12,8 +12,12 @@
 # END_DESC
 
 def sum_numbers(text: str) -> int:
-    # your code here
-    return 0
+    words = text.split()
+    result = 0
+    for word in words:
+        if word.isnumeric():
+            result += int(word)
+    return result
 
 
 if __name__ == '__main__':

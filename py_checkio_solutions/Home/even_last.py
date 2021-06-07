@@ -20,9 +20,13 @@ def checkio(array: list) -> int:
     """
         sums even-indexes elements and multiply at the last
     """
-    return 0
+    if len(array) == 0:
+        return 0
+    new_array = [item for item, index in zip(array, range(len(array))) if index % 2 == 0]
+    return sum(new_array) * array[-1]
 
-#These "asserts" using only for self-checking and not necessary for auto-testing
+
+# These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
     print('Example:')
     print(checkio([0, 1, 2, 3, 4, 5]))
