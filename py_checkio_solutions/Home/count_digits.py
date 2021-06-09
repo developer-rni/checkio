@@ -10,8 +10,7 @@
 # END_DESC
 
 def count_digits(text: str) -> int:
-    # your code here
-    return 0
+    return sum([1 if i.isdigit() else 0 for i in text])
 
 
 if __name__ == '__main__':
