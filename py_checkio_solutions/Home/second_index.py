@@ -1,8 +1,12 @@
 #!/home/nikita/github/checkio/venv/bin/checkio --domain=py run second-index
 
-# You are given two strings and you have to find an index of the second occurrence of the second string in the first one.
+# You are given two strings and you have to find an index of the second occurrence of the second string in the first
+# one.
 # 
-# Let's go through the first example where you need to find the second occurrence of "s" in a word "sims". It’s easy to find its first occurrence with a functionindexorfindwhich will point out that "s" is the first symbol in a word "sims" and therefore the index of the first occurrence is 0. But we have to find the second "s" which is 4th in a row and that means that the index of the second occurrence (and the answer to a question) is 3.
+# Let's go through the first example where you need to find the second occurrence of "s" in a word "sims". It’s easy
+# to find its first occurrence with a functionindexorfindwhich will point out that "s" is the first symbol in a word
+# "sims" and therefore the index of the first occurrence is 0. But we have to find the second "s" which is 4th in a
+# row and that means that the index of the second occurrence (and the answer to a question) is 3.
 # 
 # Input:Two strings.
 # 
@@ -15,8 +19,13 @@ def second_index(text: str, symbol: str) -> [int, None]:
     """
         returns the second index of a symbol in a given text
     """
-    # your code here
-    return 0
+    count = 0
+    for index, symbol_text in enumerate(text):
+        if symbol_text == symbol:
+            count += 1
+        if count == 2:
+            return index
+    return None
 
 
 if __name__ == '__main__':
